@@ -1,0 +1,34 @@
+'''
+Here we impliment matrix as a list containing list and take two such list
+or two such matrices from the user and we'll find their sum so to add two
+matrices.
+'''
+
+
+r = int(input("Enter number of rows:"))
+c = int(input("Enter number of colomns:"))
+X = []
+val = []
+for i in range(0, r):
+    for j in range(0, c):
+        val.insert(j, int(input("Enter the %d * %d element" %(i, j))))
+    X.insert(i, val)
+    val = []
+Y = []
+for i in range(0, r):
+    for j in range(0, c):
+        val.insert(j, int(input("Enter the %d * %d element" %(i, j))))
+    Y.insert(i, val)
+    val = []
+
+sum = []
+
+for i in range(0, r):
+    for j in range(0, c):
+        val.insert(j, X[i][j] + Y[i][j])
+    sum.insert(i, val)
+    val = []
+print(sum)
+
+
+
